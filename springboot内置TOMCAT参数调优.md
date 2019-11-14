@@ -34,4 +34,9 @@ server.max-http-header-size = 65536
 http://i2.51cto.com/images/blog/201808/21/b116170771ecb3117ae7fead03fcaa0d.png?x-oss-process=image/watermark,size_16,text_QDUxQ1RP5Y2a5a6i,color_FFFFFF,t_100,g_se,x_10,y_10,shadow_90,type_ZmFuZ3poZW5naGVpdGk=
 
 
+jps 
+
+jmap -heap $pid
+
+
 
