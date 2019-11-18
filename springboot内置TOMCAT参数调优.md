@@ -1,28 +1,22 @@
 # springboot
 
-zuul.host.maxTotalConnections = 8000
-
-zuul.host.maxPerRouteConnections = 8000
-
+zuul.host.maxTotalConnections = 100000
+zuul.host.maxPerRouteConnections = 10000
 zuul.ribbon-isolation-strategy = semaphore
-
-zuul.semaphore.max-Semaphores = 8000
-
+zuul.semaphore.max-Semaphores = 20000
 hystrix.command.default.execution.isolation.strategy = semaphore
-
-hystrix.command.default.execution.isolation.semaphore.maxConcurrentRequests = 8000
+hystrix.command.default.execution.isolation.semaphore.maxConcurrentRequests = 20000
 
 # springboot 内置TOMCAT参数调优
 
-server.connection-timeout = 20000
-
-server.tomcat.max-threads = 8000
-
-server.tomcat.min-spare-threads = 20
-
-server.tomcat.accept-count = 8000
-
+server.connection-timeout = 10000
+server.tomcat.max-threads = 20000
+server.tomcat.min-spare-threads = 200
+server.tomcat.accept-count = 20000
 server.max-http-header-size = 65536
+
+
+查看线程数 ps -TH $pid|wc -l 
 
 
 
